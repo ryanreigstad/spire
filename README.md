@@ -1,1 +1,2 @@
 # spire
+Thanks for playing!
