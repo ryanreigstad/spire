@@ -25,6 +25,7 @@ public class Consume extends AbstractBloodCard {
 	public static final int BloodCost = 5;
 	public static final int Amount = 2;
 	public static final int Upgrade = 3;
+	public static final int BleedStackCost = 2;
 
 	public static final CardType Type = CardType.SKILL;
 	public static final CardRarity Rarity = CardRarity.RARE;
@@ -42,9 +43,9 @@ public class Consume extends AbstractBloodCard {
 	public boolean canUse(AbstractPlayer p, AbstractMonster m) {
 		boolean can = super.canUse(p, m);
 		
-		if (can && m.hasPower(BleedPower.Id)) {
+		if (can && m != null && m.hasPower(BleedPower.Id)) {
 			int stacks = m.getPower(BleedPower.Id).amount;
-			if (stacks < this.magicNumber)
+			if (stacks < BleedStackCost)
 				can = false;
 			
 			if (!can)
@@ -59,8 +60,11 @@ public class Consume extends AbstractBloodCard {
 		if (m.hasPower(BleedPower.Id))
 		{
 			int stacks = m.getPower(BleedPower.Id).amount;
-			if (this.magicNumber > stacks)
-				AbstractDungeon.actionManager.addToTop(new ReducePowerAction(m, p, BleedPower.Id, stacks));
+			
+			Mod.l.debug("using consume: stacks = " + stacks + ", cost = " + BleedStackCost);
+			
+			if (stacks > BleedStackCost)
+				AbstractDungeon.actionManager.addToTop(new ReducePowerAction(m, p, BleedPower.Id, BleedStackCost));
 			else
 				AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(m, p, BleedPower.Id));
 	        AbstractDungeon.player.increaseMaxHp(this.magicNumber, true);
