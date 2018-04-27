@@ -1,0 +1,17 @@
+{
+	"Q": {
+		"NAME": "",
+		"DESCRIPTIONS": [
+			"",
+			""
+		]
+	},
+	
+	"BleedPower": {
+		"NAME": "Bleed",
+		"DESCRIPTIONS": [
+			"Takes #y",
+			" damage when attacking."
+		]
+	}
+}
