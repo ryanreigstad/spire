@@ -1,0 +1,58 @@
+{
+	"Q": {
+		"NAME": "",
+		"DESCRIPTION": "",
+		"UPGRADE_DESCRIPTION": "",
+		"EXTENDED_DESCRIPTION": [
+			"",
+			""
+		]
+	},
+	
+	"Shank": {
+		"NAME": "Shank",
+		"DESCRIPTION": "Deal !D! damage NL Apply !M! Bleed"
+	},
+	"Transfusion": {
+		"NAME": "Transfusion",
+		"DESCRIPTION": "Deal !D! damage NL Heal !D! damage"
+	},
+	"BloodPool": {
+		"NAME": "Blood Pool",
+		"DESCRIPTION": "Deal !D! damage to all enemies NL Apply !M! Bleed"
+	},
+	
+	"Consume": {
+		"NAME": "Consume",
+		"DESCRIPTION": "Consume !M! Bleed stacks NL Gain !M! Max HP"
+	},
+	
+	"HarnessPain": {
+		"NAME": "Harness Pain",
+		"EXTENDED_DESCRIPTION": [
+			"Gain ",
+			" Bleed NL Gain ",
+			" Intangible"
+		]
+	},
+	
+	"BloodStrike": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! damage"
+	},
+	"BloodDefend": {
+		"NAME": "Defend",
+		"DESCRIPTION": "Gain !B! block"
+	},
+	
+	
+	"Dummy": {
+		"NAME": "Dummy",
+		"DESCRIPTION": "Draw ",
+		"EXTENDED_DESCRIPTION": [
+			" card ",
+			" cards ",
+			"NL Exhaust"
+		]
+	}
+}
