@@ -23,7 +23,7 @@ public class Coagulate extends AbstractBloodCard {
 	public static final int BloodCost = 0;
 	public static final int Amount = 1;
 
-	public static final CardType Type = CardType.POWER;
+	public static final CardType Type = CardType.SKILL;
 	public static final CardRarity Rarity = CardRarity.UNCOMMON;
 	public static final CardTarget Target = CardTarget.SELF;
 

@@ -167,7 +167,7 @@ public class Mod implements PostInitializeSubscriber, EditCardsSubscriber, EditR
 //		BaseMod.addCard(new Dummy(CardType.SKILL, CardRarity.RARE));
 
 //		BaseMod.addCard(new Dummy(CardType.POWER, CardRarity.COMMON));
-//		BaseMod.addCard(new Dummy(CardType.POWER, CardRarity.UNCOMMON));
+		BaseMod.addCard(new Dummy(CardType.POWER, CardRarity.UNCOMMON));
 		BaseMod.addCard(new Dummy(CardType.POWER, CardRarity.RARE));
 
 		l.debug("/receiveEditCards");
