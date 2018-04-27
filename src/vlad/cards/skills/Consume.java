@@ -19,7 +19,7 @@ public class Consume extends AbstractBloodCard {
 	public static final String Id = "Consume";
 	public static final String Icon = "cards/power_overwhelming.png";
 	public static final CardStrings S = CardCrawlGame.languagePack.getCardStrings(Id);
-	public static final String NoBleedMessage = "That enemy didn't have any bleed stacks...";
+	public static final String NoBleedMessage = "That enemy doesn't have enough bleed stacks...";
 
 	public static final int Cost = 0;
 	public static final int BloodCost = 5;

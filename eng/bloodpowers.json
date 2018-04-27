@@ -18,7 +18,10 @@
 		"NAME": "Coagulate",
 		"DESCRIPTIONS": [
 			"Gain #y",
-			" block when you bleed."
+			" block when you bleed ",
+			"this turn",
+			"for ",
+			" turns
 		]
 	}
 }

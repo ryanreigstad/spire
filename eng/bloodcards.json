@@ -40,7 +40,7 @@
 	},
 	"Coagulate": {
 		"NAME": "Coagulate",
-		"DESCRIPTION": "Gain !M! block when you bleed"
+		"DESCRIPTION": "Gain !M! block when you bleed this turn"
 	},
 	
 	"BloodStrike": {

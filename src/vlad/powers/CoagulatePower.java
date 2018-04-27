@@ -1,6 +1,7 @@
 package vlad.powers;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,24 +37,24 @@ public class CoagulatePower extends AbstractPower {
 	public void updateDescription() {
 		int amt = 0;
 		if (this.owner.hasPower(BleedPower.Id)) {
-			amt = this.owner.getPower(BleedPower.Id).amount * this.amount;
+			amt = this.owner.getPower(BleedPower.Id).amount;
 		}
 
 		this.description = S.DESCRIPTIONS[0] + amt + S.DESCRIPTIONS[1];
 	}
 
-//	@Override
-//	public void atStartOfTurn() {
-//		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, Id, 1));
-//
-//		super.atStartOfTurn();
-//	}
+	@Override
+	public void atStartOfTurn() {
+		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, Id, 1));
+
+		super.atStartOfTurn();
+	}
 
 	@Override
 	public void onSpecificTrigger() {
 		int amt = 0;
 		if (this.owner.hasPower(BleedPower.Id)) {
-			amt = this.owner.getPower(BleedPower.Id).amount * this.amount;
+			amt = this.owner.getPower(BleedPower.Id).amount;
 		}
 		if (amt > 0) {
 			this.flash();
