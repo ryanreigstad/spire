@@ -3,6 +3,8 @@ package vlad.actions;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
+import vlad.powers.CoagulatePower;
+
 public class BleedAction extends LoseHPAction {
 
 	public BleedAction(AbstractCreature target, AbstractCreature source, int amount) {
@@ -14,8 +16,8 @@ public class BleedAction extends LoseHPAction {
 		super.update();
 
 		if (this.isDone && !this.shouldCancelAction()) {
-			if (this.target.hasPower("todo"))
-				this.target.getPower("todo").onSpecificTrigger();
+			if (this.target.hasPower(CoagulatePower.Id))
+				this.target.getPower(CoagulatePower.Id).onSpecificTrigger();
 		}
 	}
 

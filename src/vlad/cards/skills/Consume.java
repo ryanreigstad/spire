@@ -17,7 +17,7 @@ import vlad.powers.BleedPower;
 public class Consume extends AbstractBloodCard {
 
 	public static final String Id = "Consume";
-	public static final String Icon = "cards/plasma_wave.png";
+	public static final String Icon = "cards/power_overwhelming.png";
 	public static final CardStrings S = CardCrawlGame.languagePack.getCardStrings(Id);
 	public static final String NoBleedMessage = "That enemy didn't have any bleed stacks...";
 

@@ -13,5 +13,12 @@
 			"Takes #y",
 			" damage when attacking."
 		]
+	},
+	"CoagulatePower": {
+		"NAME": "Coagulate",
+		"DESCRIPTIONS": [
+			"Gain #y",
+			" block when you bleed."
+		]
 	}
 }

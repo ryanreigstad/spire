@@ -30,7 +30,7 @@ public abstract class AbstractBloodCard extends CustomCard {
 	@Override
 	public void initializeDescription() {
 		if (this.bloodCost > 0)
-			this.rawDescription = this.originalDescription + " NL Lose " + this.bloodCost + " HP";
+			this.rawDescription = this.originalDescription + " NL Bleed " + this.bloodCost + " HP";
 
 		super.initializeDescription();
 	}

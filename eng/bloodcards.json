@@ -8,14 +8,17 @@
 			""
 		]
 	},
-	
+	"Transfusion": {
+		"NAME": "Transfusion",
+		"DESCRIPTION": "Absorb !D! HP"
+	},
 	"Shank": {
 		"NAME": "Shank",
 		"DESCRIPTION": "Deal !D! damage NL Apply !M! Bleed"
 	},
-	"Transfusion": {
-		"NAME": "Transfusion",
-		"DESCRIPTION": "Deal !D! damage NL Heal !D! damage"
+	"Drain": {
+		"NAME": "Drain",
+		"DESCRIPTION": "Dead !D! damage NL Heal !M! HP"
 	},
 	"BloodPool": {
 		"NAME": "Blood Pool",
@@ -34,6 +37,10 @@
 			" Bleed NL Gain ",
 			" Intangible"
 		]
+	},
+	"Coagulate": {
+		"NAME": "Coagulate",
+		"DESCRIPTION": "Gain !M! block when you bleed"
 	},
 	
 	"BloodStrike": {

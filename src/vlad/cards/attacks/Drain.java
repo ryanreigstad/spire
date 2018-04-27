@@ -14,35 +14,35 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import vlad.Mod;
 import vlad.cards.AbstractBloodCard;
 
-public class Transfusion extends AbstractBloodCard {
+public class Drain extends AbstractBloodCard {
 
-	public static final String Id = "Transfusion";
-	public static final String Icon = "cards/siphon_power.png";
+	public static final String Id = "Drain";
+	public static final String Icon = "cards/channel.png";
 	public static final CardStrings S = CardCrawlGame.languagePack.getCardStrings(Id);
 
-	public static final int Cost = 2;
+	public static final int Cost = 1;
 	public static final int BloodCost = 0;
-	public static final int Amount = 8;
-	public static final int Upgrade = 3;
+	public static final int Amount = 5;
+	public static final int HealAmount = 2;
+	public static final int Upgrade = 2;
 
 	public static final CardType Type = CardType.ATTACK;
 	public static final CardRarity Rarity = CardRarity.COMMON;
 	public static final CardTarget Target = CardTarget.ENEMY;
 
-	public Transfusion() {
+	public Drain() {
 		super(Id, S.NAME, Mod.p(Icon), Cost, S.DESCRIPTION, Type, Rarity, Target, BloodCost);
 
 		this.baseDamage = this.damage = Amount;
+		this.baseMagicNumber = this.magicNumber = HealAmount;
 
 		this.initializeDescription();
 	}
 
-	protected int bleed;
-
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager
-				.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage), AttackEffect.SLASH_DIAGONAL));
+				.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage), AttackEffect.SLASH_VERTICAL));
 		AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.damage));
 
 		super.use(p, m);
@@ -50,7 +50,7 @@ public class Transfusion extends AbstractBloodCard {
 
 	@Override
 	public AbstractCard makeCopy() {
-		return new Transfusion();
+		return new Drain();
 	}
 
 	@Override
@@ -58,6 +58,7 @@ public class Transfusion extends AbstractBloodCard {
 		if (!this.upgraded) {
 			this.upgradeName();
 			this.upgradeDamage(Upgrade);
+			this.upgradeMagicNumber(Upgrade);
 
 			this.initializeDescription();
 		}

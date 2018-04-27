@@ -29,8 +29,10 @@ import basemod.interfaces.SetUnlocksSubscriber;
 import vlad.cards.Dummy;
 import vlad.cards.attacks.BloodPool;
 import vlad.cards.attacks.BloodStrike;
+import vlad.cards.attacks.Drain;
 import vlad.cards.attacks.Shank;
 import vlad.cards.attacks.Transfusion;
+import vlad.cards.powers.Coagulate;
 import vlad.cards.powers.HarnessPain;
 import vlad.cards.skills.BloodDefend;
 import vlad.cards.skills.Consume;
@@ -144,14 +146,16 @@ public class Mod implements PostInitializeSubscriber, EditCardsSubscriber, EditR
 
 		// attacks
 		BaseMod.addCard(new Shank());
-		BaseMod.addCard(new Transfusion());
+		BaseMod.addCard(new Drain());
 		BaseMod.addCard(new BloodPool());
+		BaseMod.addCard(new Transfusion());
 		
 		// skills
 		BaseMod.addCard(new Consume());
 		
 		// powers
 		BaseMod.addCard(new HarnessPain());
+		BaseMod.addCard(new Coagulate());
 
 		// dummy cards that need to be here so it doesn't break
 //		BaseMod.addCard(new Dummy(CardType.ATTACK, CardRarity.COMMON));
@@ -163,7 +167,7 @@ public class Mod implements PostInitializeSubscriber, EditCardsSubscriber, EditR
 //		BaseMod.addCard(new Dummy(CardType.SKILL, CardRarity.RARE));
 
 //		BaseMod.addCard(new Dummy(CardType.POWER, CardRarity.COMMON));
-		BaseMod.addCard(new Dummy(CardType.POWER, CardRarity.UNCOMMON));
+//		BaseMod.addCard(new Dummy(CardType.POWER, CardRarity.UNCOMMON));
 		BaseMod.addCard(new Dummy(CardType.POWER, CardRarity.RARE));
 
 		l.debug("/receiveEditCards");
