@@ -37,6 +37,8 @@ public class Coagulate extends AbstractBloodCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		// how does this work? it adds one stack of this.magicNumber-powered coagulate
+		// if you play a second coagulate with a different magic number, it won't apply the new this.magicNumber
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CoagulatePower(p, p, this.magicNumber), 1));
 		
 		super.use(p, m);
